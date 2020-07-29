@@ -43,8 +43,6 @@ y <- y %>% mutate(activityLabel = activities$label[code]) %>% select(activityLab
 data <- cbind(X, y, subject)
 
 # Setting descreptive names for the columns
-names(data) <- sub("^t", "time", names(data))
-names(data) <- sub("^f", "frequency", names(data))
 names(data) <- sub("(mean)", "Mean", names(data))
 names(data) <- sub("(std)", "Std", names(data))
 names(data) <- gsub("-", "", names(data))
